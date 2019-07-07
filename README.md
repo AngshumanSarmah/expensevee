@@ -39,5 +39,7 @@ Steps for user .
 ![10 settings_delete_confirm](https://user-images.githubusercontent.com/45401385/60766129-97a84e00-a0c2-11e9-84df-8daf289026d1.JPG)
 ![11 settings_undo_delete](https://user-images.githubusercontent.com/45401385/60766130-97a84e00-a0c2-11e9-9008-668302dc49e0.JPG)
 ![12 home_update_expenses](https://user-images.githubusercontent.com/45401385/60766506-7185ac80-a0c8-11e9-8ba1-565a80d6ac47.JPG)
+![13 home_validation_errors](https://user-images.githubusercontent.com/45401385/60766525-aeea3a00-a0c8-11e9-80ea-0ae05c4207f4.JPG)
+
 
 
