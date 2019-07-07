@@ -1,0 +1,5 @@
+:host >>> .ng-sidebar {
+    width: 10em; 
+    background-color: rgb(21, 35, 56);
+    margin-top: 3em;
+  }

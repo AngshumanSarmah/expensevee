@@ -1,0 +1,56 @@
+<form [formGroup]="expenseForm" (ngSubmit)="updateAddExpense()">
+    <h4 class="text-center" *ngIf="!editFlag">Please fill up the expense details</h4>
+    <h4 class="text-center" *ngIf="editFlag">Please update the expense details</h4>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="form-group col-sm-6">
+        <label for="category"><strong>Category</strong></label>
+        <select formControlName="category" [compareWith]="compare" 
+          id="category" name="category" class="form-control">
+            <option value="Select">Select</option>
+            <option *ngFor="let exp of categories" [ngValue]="exp">
+              {{exp}}
+            </option>
+        </select>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="form-group col-sm-3">
+        <label for="category"><strong>Item name</strong></label>
+        <input type="text" name="name" id="name" class="form-control"
+        formControlName="name">
+        <span class="help-block red" *ngIf="!expenseForm.get('name').valid && expenseForm.get('name').touched">Please enter a proper expense name!</span>
+      </div>
+      <div class="form-group col-sm-3">
+        <label for="category"><strong>Amount</strong></label>
+        <input type="text" name="amount" id="amount" class="form-control"
+        formControlName="amount">
+        <span class="help-block red" *ngIf="!expenseForm.get('amount').valid && expenseForm.get('amount').touched">Please enter a proper expense amount!</span>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="form-group col-sm-6">
+        <label for="date"><strong>Expense Date</strong></label>
+        <input type="date" name="amount" id="amount" class="form-control"
+        formControlName="date">
+        <span class="help-block red" *ngIf="!expenseForm.get('date').valid && expenseForm.get('date').touched">Please enter a proper expense date!</span>
+        
+        <!-- <app-date></app-date> -->
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <button class="btn btn-success mr-2" type="submit" *ngIf="!editFlag" [disabled]="!expenseForm.valid">Add Expense</button>
+        <button class="btn btn-success mr-2" type="submit" *ngIf="editFlag" [disabled]="!expenseForm.valid">Update Expense</button>
+        <button class="btn btn-danger mr-2" type="button" (click)="resetForm()">Clear</button>
+      </div>
+      <div class="col-sm-3"></div>
+  
+    </div>
+  </form>

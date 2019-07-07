@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-9" style="border:1px solid;margin-left: 19%;">
+      <div class="row">
+        <div class="col-6"><strong>Budget Overview</strong></div>
+      </div>
+      <br>
+      <div class="row" *ngIf="totalBudget && totalExpense;else noData">
+        <div class="col-6">
+            <circle-progress
+            [percent]="percentage"
+            [radius]="70"
+            [outerStrokeWidth]="10"
+            [innerStrokeWidth]="5"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+          ></circle-progress>
+        </div>
+        <div class="col-6">
+          <span>
+            <strong>Total budget</strong><br>
+            <span>Rs. {{totalBudget}}</span><br>          
+          </span><br>
+          <span class="mt-5">
+            <strong>Total Expenses</strong><br>
+            <span>Rs. {{totalExpense}}</span>          
+          </span><br>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+
+  <ng-template #noData>
+    <div class="text-center" style="height: 11em;">
+      <span>
+        No Data Found!<br>
+        Visit Settings page to start adding categories and budget limit
+      </span>
+    </div>
+  </ng-template>

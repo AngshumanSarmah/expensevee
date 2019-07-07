@@ -1,0 +1,35 @@
+<form [formGroup]="settingsForm">
+    <div class="row text-center mt-5 form-group">
+        <div class="col-1"></div>
+        <div class="col-4">Total Budget</div>
+        <div class="col-4">
+            <input type="text" class="form-control" formControlName="totalLimit" placeholder="Enter total budget">
+            <span class="help-block red" *ngIf="!settingsForm.get('totalLimit').valid && settingsForm.get('totalLimit').touched && settingsForm.get('totalLimit').value != undefined">Please enter a proper budget limit!</span>
+        </div>
+        <button class="btn btn-primary col-2 col-md-1 ml-5 btnheight" type="button" [disabled]="!settingsForm.get('totalLimit').valid" (click)="updateBudgetAmount()">Update</button>
+        <div class="col-1"></div>
+    </div>
+    <div class="row text-center mt-5 form-group">
+        <div class="col-1"></div>
+        <div class="col-4">Categories</div>
+        <div class="col-4">
+            <input type="text" class="form-control" formControlName="category" placeholder="Category name here">
+            <span class="help-block red" *ngIf="!settingsForm.get('category').valid && settingsForm.get('category').touched && settingsForm.get('category').value != undefined">Please enter a proper category name!</span>
+        </div>
+        <button class="btn btn-primary col-2 col-md-1 ml-5 btnheight" type="button" (click)="addCategory()" [disabled]="!settingsForm.get('category').valid">Add</button>
+        <div class="col-1"></div>
+    </div>
+        <div *ngIf="categories && categories.length>0" class="mt-5" style="border:1px solid;width: 22%;margin-left: 21%;" >
+            <div class="row" *ngFor="let category of categories; let i= index" style="margin-bottom:1em;">
+                <div class="col-4" style="margin-left: 5%;margin-right: 39%;">
+                    <span [class.text-decoration]="category.deleteStatus == '1'">
+                        {{category.category}}
+                    </span>
+                    <!-- <input type="text"  class="form-control" disabled formControlName="categoryName"> -->
+                </div>               
+                <div class="col-1">
+                    <confirm-component [selectedIndex]="i" [status]="categoryService.getCategoryStatus(+i)"></confirm-component>
+                </div>
+            </div>
+        </div>
+</form>

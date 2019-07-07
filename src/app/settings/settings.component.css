@@ -1,0 +1,15 @@
+.red{
+    color:red
+}
+
+Input.ng-invalid.ng-touched {
+    border: 1px solid red
+}
+
+.btnheight{
+    height: 10% !important;
+}
+
+.text-decoration{
+    text-decoration: line-through
+}

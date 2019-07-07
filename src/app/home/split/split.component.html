@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-9" style="border:1px solid;margin-left: 7%;height: 14.2em;">
+      <div class="row">
+        <div class="col-6"><strong>Category wise split</strong></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+          <!-- for less than 10 category -->
+          <pie-chart *ngIf="showPieCharts"></pie-chart>
+          <div *ngIf="tableData && tableData.length>0" style="max-height: 10.4em;overflow-y: scroll;display: block">
+              <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="" style="width: 50%;">Category</th>
+                      <th class=""  style="width: 50%;">Expense amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let expense of tableData" class="tableBorder">
+                      <td class="" style="width: 50%;">{{expense.name}}</td>
+                      <td class="" style="width: 50%;">{{expense.amount}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+          <div class="row text-center" *ngIf="tableData && tableData.length == '0' && !showPieCharts">
+            <div class="col-md-12">
+              <span>
+                No Data Found!<br>
+                Visit Settings page to start adding categories
+              </span>
+              </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>

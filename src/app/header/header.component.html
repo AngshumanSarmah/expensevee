@@ -1,0 +1,27 @@
+<!-- Container for sidebar(s) + page content -->
+<ng-sidebar-container style="height: 100vh;">
+
+        <!-- A sidebar -->
+        <ng-sidebar [(opened)]="_opened" position="left">
+            <div style="margin-left: 7%;color:white;cursor:pointer">
+                <span routerLink="/home" (click)="_toggleSidebar()"> Home</span><br><br>
+                <span routerLink="/settings" (click)="_toggleSidebar()"> Settings</span><br><br>
+                <span routerLink="/profile"(click)="_toggleSidebar()"> Profile</span>
+            </div>
+        </ng-sidebar>
+    
+        <!-- Page content -->
+        <div ng-sidebar-content>
+            <div class="row" style="background-color: rgba(12, 42, 88, 0.555);font-size:2em">
+                <div class="col-2">
+                    <i (click)="_toggleSidebar()" class="fa fa-bars"></i>
+                </div>
+                <div class="col-8 text-center">
+                    <span>Expensevee</span>
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    
+    </ng-sidebar-container>

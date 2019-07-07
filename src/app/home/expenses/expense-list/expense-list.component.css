@@ -1,0 +1,16 @@
+.col_width
+    {width:18%}
+
+.tableBorder
+    {
+        border: 1px solid;
+        border-radius: 25px
+    }
+
+.pencil
+    {
+        color:blue;
+        cursor:pointer;
+        margin-right: 10px;
+
+    }

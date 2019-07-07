@@ -1,0 +1,39 @@
+<table class="table table-borderless" *ngIf="expenseArray && expenseArray.length>0;else displayAddMsg">
+  <thead>
+    <tr>
+      <th class="col_width">Category</th>
+      <th class="col_width">Item Name</th>
+      <th class="col_width">Amount</th>
+      <th class="col_width">Expense Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let expense of expenseArray | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; let i = index"
+      class="tableBorder">
+      <td class="col_width">
+        <a [routerLink]="['/edit',i]" 
+            class="fa fa-pencil pencil" aria-hidden="true"
+            routerLinkActive="active"
+        ></a>
+        {{expense.category}}
+      </td>
+      <td class="col_width">{{expense.name}}</td>
+      <td class="col_width">{{expense.amount}}</td>
+      <td class="col_width">{{expense.date}}</td>
+    </tr>
+  </tbody>
+</table>
+<ngb-pagination 
+    *ngIf="showPagination"
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [collectionSize]="collectionSize" aria-label="Default pagination"></ngb-pagination>
+
+<ng-template #displayAddMsg>
+  <div class="col-sm-12">
+    <p class="text-center">
+      There is no expense details found! <br>
+      Click on "Add Expenses" to start adding expenses! 
+    </p>
+  </div>
+</ng-template>
