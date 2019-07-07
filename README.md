@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
 
+Npm packages used:
+1.ng2-charts
+2.charts.js
+3.ng-circle-progress
+4.ng-bootstrap
+5.font-awosome
+6.bootstrap
+
 Steps for user .
 1. User needs to navigate to the url provided(its locally http://localhost:4200/settings)
 2. Then if user visits for the 1st time then he needs to go to settings page(instruction is given on home page to go to settings page)
