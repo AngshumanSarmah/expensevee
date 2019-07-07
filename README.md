@@ -1,1 +1,12 @@
 # expensevee
+![1 home_onload](https://user-images.githubusercontent.com/45401385/60766119-95de8a80-a0c2-11e9-9e4e-4ecbeca6f905.JPG)
+![2 add_expenses](https://user-images.githubusercontent.com/45401385/60766120-96772100-a0c2-11e9-82d1-af880bdbbc49.JPG)
+![3 settings_onload](https://user-images.githubusercontent.com/45401385/60766121-96772100-a0c2-11e9-93af-abd23c84e2b7.JPG)
+![4 settings_category_without_pagination](https://user-images.githubusercontent.com/45401385/60766123-96772100-a0c2-11e9-92ca-cef461d9c76b.JPG)
+![5 home_with_pieChart](https://user-images.githubusercontent.com/45401385/60766124-96772100-a0c2-11e9-83c6-20d65573755a.JPG)
+![6 home_pagination_table](https://user-images.githubusercontent.com/45401385/60766125-970fb780-a0c2-11e9-8b82-41c8ef1c114f.JPG)
+![7 error_page](https://user-images.githubusercontent.com/45401385/60766126-970fb780-a0c2-11e9-8a2f-56d3ec9c3066.JPG)
+![8 profile](https://user-images.githubusercontent.com/45401385/60766127-970fb780-a0c2-11e9-8c7d-64c2fee8f5f2.JPG)
+![9 settings_deleted_categories](https://user-images.githubusercontent.com/45401385/60766128-970fb780-a0c2-11e9-9bb1-4e162672c75b.JPG)
+![10 settings_delete_confirm](https://user-images.githubusercontent.com/45401385/60766129-97a84e00-a0c2-11e9-84df-8daf289026d1.JPG)
+![11 settings_undo_delete](https://user-images.githubusercontent.com/45401385/60766130-97a84e00-a0c2-11e9-9008-668302dc49e0.JPG)
