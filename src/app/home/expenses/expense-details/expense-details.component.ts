@@ -60,7 +60,6 @@ export class ExpenseDetailsComponent implements OnInit {
 
   //this method is used to update or add a expense detail
   updateAddExpense(){
-    console.log(this.expenseForm.value.date);
     let dateFormat = this.expenseForm.value.date.split('-');
     dateFormat = dateFormat[2]+'.'+dateFormat[1]+'.'+dateFormat[0];
     let expenseObj:ExpenseDetails = new ExpenseDetails(this.expenseForm.value.category,this.expenseForm.value.name,

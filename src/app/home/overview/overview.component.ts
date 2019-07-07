@@ -14,7 +14,7 @@ export class OverviewComponent implements OnInit {
   ngOnInit() {
     this.totalBudget = +localStorage.getItem('totalLimit');
     this.totalExpense = +localStorage.getItem('totalExpense');
-    this.percentage = (this.totalExpense/this.totalBudget)*100;
+    this.percentage = (this.totalExpense/this.totalBudget)*100;    
   }
 
 }

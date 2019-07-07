@@ -15,10 +15,7 @@ export class HeaderComponent implements OnInit {
   name = 'Angular 4';
   private _opened: boolean = false;
 
-  private _toggleSidebar() {
-    console.log("ias");
-    console.log(this._opened);
-    
+  private _toggleSidebar() {    
     this._opened = !this._opened;
   }
 

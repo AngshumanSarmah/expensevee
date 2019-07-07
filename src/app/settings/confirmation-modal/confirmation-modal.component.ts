@@ -16,7 +16,6 @@ export class NgbdModalContent {
   constructor(private activeModal: NgbActiveModal,
               private categoryService: CategoriesService) {}
   delete(){
-    console.log("Delete");
     this.activeModal.close('Ok click');
     this.status = this.status == "1" ? "0" : "1";
     this.categoryService.deleteCategory(+this.selectedIndex,this.status);
@@ -33,10 +32,8 @@ export class NgbdModalComponent {
   @Input() selectedIndex:string;
   @Input() status:string;
   open() {
-    console.log(this.status);
     const modalRef = this.modalService.open(NgbdModalContent);
     modalRef.componentInstance.selectedIndex = this.selectedIndex;
     modalRef.componentInstance.status = this.status;
-
   }
 }

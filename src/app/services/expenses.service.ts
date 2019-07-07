@@ -46,7 +46,6 @@ export class ExpenseService{
     addExpense(expenseObj:ExpenseDetails){
         let totalExpense: number = 0;
         this.expensesArray.push(expenseObj);
-        console.log(expenseObj);
         for (let index = 0; index < this.expensesArray.length; index++) {
             totalExpense = totalExpense + +this.expensesArray[index].getAmount();
         }        

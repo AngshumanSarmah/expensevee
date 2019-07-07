@@ -24,9 +24,7 @@ export class SettingsComponent implements OnInit {
     this.initializeForm();
     this.categoryService.categoriesSub.subscribe(
       (categoryList:CategoryDetails[])=>{
-        this.categories = categoryList;
-        console.log(categoryList);
-        
+        this.categories = categoryList;        
       }
     )
   }

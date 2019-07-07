@@ -22,7 +22,6 @@ export class SplitComponent implements OnInit {
       for (let j = 0; j < this.tableData.length; j++) {
         for (let i = 0; i < expenses.length; i++) {
           if(this.tableData[j].name === expenses[i].category){
-            console.log(expenses[i].amount);
             this.tableData[j].amount = this.tableData[j].amount ? this.tableData[j].amount : 0;
             this.tableData[j].amount = this.tableData[j].amount + +expenses[i].amount;
           }
