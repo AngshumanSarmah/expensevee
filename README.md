@@ -38,4 +38,6 @@ Steps for user .
 ![9 settings_deleted_categories](https://user-images.githubusercontent.com/45401385/60766128-970fb780-a0c2-11e9-9bb1-4e162672c75b.JPG)
 ![10 settings_delete_confirm](https://user-images.githubusercontent.com/45401385/60766129-97a84e00-a0c2-11e9-84df-8daf289026d1.JPG)
 ![11 settings_undo_delete](https://user-images.githubusercontent.com/45401385/60766130-97a84e00-a0c2-11e9-9008-668302dc49e0.JPG)
+![12 home_update_expenses](https://user-images.githubusercontent.com/45401385/60766506-7185ac80-a0c8-11e9-8ba1-565a80d6ac47.JPG)
+
 
